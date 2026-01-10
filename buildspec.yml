@@ -1,12 +1,30 @@
 version: 0.2
 
 phases:
-  install:
+  pre_build:
     commands:
+      - echo Logging in to Amazon ECR...
+      - echo Build started on `date`
+      - echo Building the React app...
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo Installing dependencies...
       - npm install
   build:
     commands:
+      - echo Build started on `date`
       - npm run build
+      - echo Build completed on `date`
   post_build:
     commands:
-      - aws s3 sync build/ s3://static-web-bucket-01020304 --delete
+      - echo Build phase completed
+      - echo Syncing build artifacts to S3...
+      - aws s3 sync build/ s3://static-web-bucket-01020304 --delete --exact-timestamps
+      - echo Deployment completed on `date`
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build
