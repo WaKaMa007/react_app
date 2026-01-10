@@ -1,21 +1,179 @@
 /* src/App.css */
 .App {
-    text-align: center;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    min-height: 100vh;
-    color: white;
-    display: flex;
+  text-align: center;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  transition: background 0.5s ease;
+}
+
+/* Background color variants */
+.bg-purple {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.bg-blue {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.bg-green {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+.bg-orange {
+  background: linear-gradient(135deg, #fa709a, #fee140);
+}
+
+.bg-pink {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+.bg-teal {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.App-header {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px 0;
+  backdrop-filter: blur(10px);
+}
+
+.time {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.version {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin: 5px 0;
+}
+
+.feature-section {
+  margin: 30px 0;
+}
+
+.feature-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+button {
+  padding: 12px 24px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: #ff6b6b;
+  color: white;
+}
+
+.btn-secondary {
+  background: #4ecdc4;
+  color: white;
+}
+
+.btn-success {
+  background: #95e1d3;
+  color: #333;
+}
+
+.status-box {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 30px 0;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.status-box p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.tech-stack {
+  margin-top: 40px;
+}
+
+.tech-stack h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .button-group {
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
   }
+  
   button {
-    padding: 10px 20px;
-    margin-top: 20px;
-    border: none;
-    background: #ff6b6b;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
+    width: 80%;
+    max-width: 300px;
   }
+}
 
