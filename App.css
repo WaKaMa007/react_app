@@ -1,0 +1,20 @@
+/* src/App.css */
+.App {
+    text-align: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    background: #ff6b6b;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
